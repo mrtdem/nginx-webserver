@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Main Page</title>
+</head>
+<body>
+<h1 id="welcome"></h1>
+<script>
+function setGreeting() {
+    var greeting;
+   
+    if (sessionStorage.getItem('greeting')) {
+        // If 'greeting' is already set, toggle between 'Hello' and 'World'
+        greeting = sessionStorage.getItem('greeting') === 'Hello' ? 'World' : 'Hello';
+    } else {
+        greeting = 'Hello';
+    }
+    document.getElementById('welcome').innerText = greeting;
+
+    sessionStorage.setItem('greeting', greeting);
+}
+
+window.onload = setGreeting;
+</script>
+</body>
+</html>
