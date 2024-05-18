@@ -1,0 +1,5 @@
+config:
+  aks-hello-world:location: westeurope
+  aks-hello-world:prefix: temp
+  azure-native:location: westeurope
+  # aks-hello-world:sshkey: insert-ssh.pub
